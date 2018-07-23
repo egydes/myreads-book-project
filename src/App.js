@@ -16,7 +16,7 @@ class BooksApp extends Component {
   //update books shelf
   updateShelf = (book, shelf) => {
     let books;
-    if (this.state.books.findIndex(b => b.id === book.id) > 0) {
+    if (this.state.books.findIndex(b => b.id === book.id) >= 0) {
       // change the position of an existing book in the shelf
       books = this.state.books.map(b => {
         if (b.id === book.id) {
@@ -71,7 +71,6 @@ class BooksApp extends Component {
     const { query } = this.state;
     return (
       <div className="app">
-        // route
         <Route
           exact
           path="/search"
@@ -106,7 +105,6 @@ class BooksApp extends Component {
             </div>
           )}
         />
-        // route
         <Route
           exact
           path="/"
