@@ -5,6 +5,7 @@ class Book extends React.Component {
         shelf: 'none'
     }
 
+    // after dom Loading
     componentDidMount() {
         const { book } = this.props;
         if (book.shelf) {

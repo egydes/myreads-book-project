@@ -73,7 +73,7 @@ class BooksApp extends Component {
     const { query } = this.state
     return (
       <div className="app">
-
+// route 
         <Route exact path="/search" render={() => (
           <div className="search-books">
             <div className="search-books-bar">
@@ -97,6 +97,7 @@ class BooksApp extends Component {
             </div>
           </div>
         )} />
+        // route
         <Route exact path="/" render={() => (
           <ListBook books={this.state.books}
             onUpdateShelf={(book, shelf) => this.updateShelf(book, shelf)} />
